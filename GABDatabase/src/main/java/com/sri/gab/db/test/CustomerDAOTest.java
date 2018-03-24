@@ -16,7 +16,7 @@ public class CustomerDAOTest {
 		
 		log.error("In Customer  Test");
 		addCustomer();
-		updateCustomer();
+		//updateCustomer();
 		dispAllcustomers();
 		System.exit(0);
 		
