@@ -1,4 +1,5 @@
-﻿drop table userPermissions CASCADE;
+drop table CustomerMaster CASCADE;
+drop table userPermissions CASCADE;
 drop table GAB_Functionalities CASCADE;
 drop table Users CASCADE;
 
@@ -21,6 +22,21 @@ create table GAB_Functionalities(
 Create table userPermissions(
 	uid int references Users(uid) not null,
 	fid int references GAB_Functionalities(fid)
+);
+
+
+
+create table CustomerMaster(
+    cid serial primary key,
+    FirstName   varchar(100) not null,
+    MiddleName varchar(100),
+    LastName   varchar(100),
+    DateOfBirth    date,
+    PlaceofBirth  varchar(200),
+    AstroID	  varchar(100),
+    emailid	  varchar(200),
+    phone1        varchar(20),
+    phone2        varchar(20)
 );
 
 insert into users (UserName,FullName,email,phone,pwd) values ('Venu','Venugopal Durshetty','vdurshety@gmail.com','23809723089','test');
