@@ -1,0 +1,2 @@
+include ':GABUtil'
+project(':GABUtil').projectDir = new File(settingsDir, '../GABUtil')

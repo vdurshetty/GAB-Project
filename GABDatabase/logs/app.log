@@ -1,0 +1,10 @@
+2018-03-24 15:28:17,427 ERROR c.s.g.d.u.JdbcConnection [main] Connection Failed! Check output console :FATAL: password authentication failed for user "postgres"
+2018-03-24 15:28:18,120 ERROR c.s.g.d.u.JdbcConnection [main] Connection Failed! Check output console :FATAL: password authentication failed for user "postgres"
+2018-03-24 15:28:58,838 ERROR c.s.g.d.u.JdbcConnection [main] Connection Failed! Check output console :FATAL: password authentication failed for user "postgres"
+2018-03-24 15:28:59,777 ERROR c.s.g.d.u.JdbcConnection [main] Connection Failed! Check output console :FATAL: password authentication failed for user "postgres"
+2018-03-24 15:30:20,653 ERROR c.s.g.d.u.JdbcConnection [main] Connection Failed! Check output console :FATAL: password authentication failed for user "postgres"
+2018-03-24 15:30:21,690 ERROR c.s.g.d.u.JdbcConnection [main] Connection Failed! Check output console :FATAL: password authentication failed for user "postgres"
+2018-03-24 15:31:36,648 ERROR c.s.g.d.u.JdbcConnection [main] Connection Failed! Check output console :FATAL: database "TCSB" does not exist
+2018-03-24 15:31:37,484 ERROR c.s.g.d.u.JdbcConnection [main] Connection Failed! Check output console :FATAL: database "TCSB" does not exist
+2018-03-24 15:42:23,133 ERROR c.s.g.d.u.JdbcConnection [main] Connection Failed! Check output console :FATAL: database "TCSB" does not exist
+2018-03-24 15:42:23,532 ERROR c.s.g.d.u.JdbcConnection [main] Connection Failed! Check output console :FATAL: database "TCSB" does not exist
