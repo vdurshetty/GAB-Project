@@ -24,7 +24,7 @@ public class Customer {
 	private int  custID;
 	
 	@Column(name = "AstroID")
-    private String astroId;
+    private String astroId;   
 	
 
 	@Column(name = "FirstName")
