@@ -1,6 +1,10 @@
 
 package com.sri.gab.db.dto;
 
+/*
+ * This is a Customer Data Object to store customer details 
+ */
+
 
 import java.util.Date;
 
@@ -26,7 +30,6 @@ public class Customer {
 	@Column(name = "AstroID")
     private String astroId;   
 	
-
 	@Column(name = "FirstName")
     private String firstName;
 	
