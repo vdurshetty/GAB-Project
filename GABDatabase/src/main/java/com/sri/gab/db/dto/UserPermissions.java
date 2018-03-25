@@ -28,7 +28,7 @@ public class UserPermissions implements Serializable{
 	
 	@ManyToOne
 	@JoinColumn(name="fid")
-	private PORAFunctionalities pFunc;
+	private GABFunctionalities pFunc;
 
 	public User getpUser() {
 		return pUser;
@@ -38,11 +38,11 @@ public class UserPermissions implements Serializable{
 		this.pUser = pUser;
 	}
 
-	public PORAFunctionalities getpFunc() {
+	public GABFunctionalities getpFunc() {
 		return pFunc;
 	}
 
-	public void setpFunc(PORAFunctionalities pFunc) {
+	public void setpFunc(GABFunctionalities pFunc) {
 		this.pFunc = pFunc;
 	}
 

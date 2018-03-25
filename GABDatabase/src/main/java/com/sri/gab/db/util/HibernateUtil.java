@@ -56,7 +56,7 @@ import com.sri.gab.security.CipherTextInfo;
 	            
 	        
 	        	configuration.addAnnotatedClass (com.sri.gab.db.dto.User.class);
-	        	configuration.addAnnotatedClass (com.sri.gab.db.dto.PORAFunctionalities.class);
+	        	configuration.addAnnotatedClass (com.sri.gab.db.dto.GABFunctionalities.class);
 	        	configuration.addAnnotatedClass (com.sri.gab.db.dto.UserPermissions.class);
 	        	configuration.addAnnotatedClass (com.sri.gab.db.dto.Customer.class);
 	        	

@@ -16,7 +16,7 @@ import org.hibernate.query.NativeQuery;
 import org.hibernate.transform.Transformers;
 
 import com.sri.gab.db.dto.KeyValueMaster;
-import com.sri.gab.db.dto.PORAFunctionalities;
+import com.sri.gab.db.dto.GABFunctionalities;
 import com.sri.gab.db.dto.User;
 import com.sri.gab.db.dto.UserPermissions;
 import com.sri.gab.db.exception.AddException;
@@ -192,13 +192,13 @@ public class UserDAO {
 		return users;
 	}
 	
-	public Vector<PORAFunctionalities> getAllFunctionalities1() throws FetchDataException{
-		Vector<PORAFunctionalities> funsList =new Vector<>();
+	public Vector<GABFunctionalities> getAllFunctionalities1() throws FetchDataException{
+		Vector<GABFunctionalities> funsList =new Vector<>();
 		Session session = null;
 		try{
 			session = SF.getCurrentSession();
 			session.beginTransaction();
-			Criteria ct = session.createCriteria(PORAFunctionalities.class);
+			Criteria ct = session.createCriteria(GABFunctionalities.class);
 			ct.addOrder(Order.asc("fName"));  // Order By condition
 			if (ct.list()!=null) {
 				funsList.addAll(ct.list());
@@ -220,7 +220,7 @@ public class UserDAO {
 		try{
 			session = SF.getCurrentSession();
 			session.beginTransaction();
-			Criteria cr = session.createCriteria(PORAFunctionalities.class)
+			Criteria cr = session.createCriteria(GABFunctionalities.class)
 				    .setProjection(Projections.projectionList()
 				      .add(Projections.property("fID"), "id")
 				      .add(Projections.property("fName"), "text"))
@@ -254,7 +254,7 @@ public class UserDAO {
 			query.executeUpdate();  
 			List<UserPermissions> userPermissions = user.getUserPermissions();
 			for (int i=0;i<userPermissions.size();i++){
-				PORAFunctionalities pora = userPermissions.get(i).getpFunc();
+				GABFunctionalities pora = userPermissions.get(i).getpFunc();
 				String upSql = "insert into UserPermissions(uid,fid) values ('" + uid  + "','" + pora.getfID()  + "')";
 				query = session.createSQLQuery(upSql); 
 				query.executeUpdate(); 
