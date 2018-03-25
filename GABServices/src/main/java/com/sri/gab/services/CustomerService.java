@@ -20,7 +20,7 @@ public interface CustomerService {
 	
 	public List<Customer> searchCustomers(Customer customer) throws FetchDataException;
 	
-	public List<Customer> getAllCustomers(Customer customer) throws FetchDataException;
+	public List<Customer> getAllCustomers() throws FetchDataException;
 	
 	public boolean deleteCustomer(Customer customer) throws DeleteException, RecordNotFoundException;
 	

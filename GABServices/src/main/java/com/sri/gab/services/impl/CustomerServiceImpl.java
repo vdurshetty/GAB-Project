@@ -60,7 +60,7 @@ public class CustomerServiceImpl implements CustomerService{
 	}
 
 	@Override
-	public List<Customer> getAllCustomers(Customer customer) throws FetchDataException {
+	public List<Customer> getAllCustomers() throws FetchDataException {
 		return cDAO.getAllCustomers();
 	}
 
