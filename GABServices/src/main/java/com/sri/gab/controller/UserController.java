@@ -36,7 +36,6 @@ public class UserController {
 		return "Hello Goddies......";
 	}
 	
-	
 	@RequestMapping(value = "/addUser", method = RequestMethod.PUT)
 	public ResponseEntity<?> createUser(@RequestBody User user, UriComponentsBuilder ucBuilder) {
 		System.out.println("in add User");
@@ -53,9 +52,7 @@ public class UserController {
 		return response;
 	}
 	
-
-	
-	@RequestMapping(value = "/udateUser", method = RequestMethod.POST)
+	@RequestMapping(value = "/updateUser", method = RequestMethod.POST)
 	public ResponseEntity<?> updateUser(@RequestBody User user, UriComponentsBuilder ucBuilder) {
 		System.out.println("in update User");
 		ResponseEntity<?> response = null;
@@ -70,7 +67,20 @@ public class UserController {
 		}
 		return response;
 	}
-	
+		
+	@RequestMapping(value = "/AuthUser", method = RequestMethod.POST)
+	public ResponseEntity<?> AuthenticateUser(@RequestBody User user) {
+		System.out.println("in Authenticate User");
+		ResponseEntity<?> response = null;
+		User retUser;
+		try {
+			retUser = userService.AuthenticateUser(user);
+			response = new ResponseEntity<User>(retUser,HttpStatus.OK);
+		} catch (FetchDataException e) {
+			response = new ResponseEntity<Object>(e.getMessage(),HttpStatus.CONFLICT);
+		}
+		return response;
+	}
 	
 	@RequestMapping(value = "/listUsers", method = RequestMethod.GET)
 	public ResponseEntity<?> listUsers() {
