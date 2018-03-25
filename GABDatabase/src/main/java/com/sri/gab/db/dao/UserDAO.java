@@ -160,6 +160,7 @@ public class UserDAO {
 			if (users!=null){
 				if (users.size()>0){
 					validUser =   (User) ct.list().get(0);
+					validUser.setPwd("");
 				}
 			}
 		}catch (Exception ex){

@@ -119,7 +119,7 @@ public class CustomerDAO {
 		return status;
 	}
 
-	public Customer getCustomer(int cid) throws FetchDataException{
+	public Customer getCustomer(long cid) throws FetchDataException{
 		Customer customer = null;
 		Session session = null;
 		try{

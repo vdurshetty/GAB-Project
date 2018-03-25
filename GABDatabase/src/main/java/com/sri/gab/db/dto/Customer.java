@@ -25,7 +25,7 @@ public class Customer {
 	@GeneratedValue(generator="generator")
 	@Column(name = "cID")
 	@Id
-	private int  custID;
+	private long  custID;
 	
 	@Column(name = "AstroID")
     private String astroId;   
@@ -68,11 +68,11 @@ public class Customer {
 	}
 
 
-	public int getCustID() {
+	public long getCustID() {
 		return custID;
 	}
 
-	public void setCustID(int custID) {
+	public void setCustID(long custID) {
 		this.custID = custID;
 	}
 
