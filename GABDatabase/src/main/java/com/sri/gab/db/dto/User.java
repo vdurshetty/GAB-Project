@@ -21,7 +21,7 @@ public class User {
 	@GeneratedValue(generator="generator")
 	@Column(name = "uid")
 	@Id
-	private int  uid;
+	private long  uid;
 	
 	@Column(name = "UserName")
     private String userName;
@@ -29,7 +29,6 @@ public class User {
 	@Column(name = "FullName")
 	private String fullName;
 	
-
 	@Column(name = "email")
 	private String email;
 	
@@ -49,12 +48,12 @@ public class User {
 	}
 
 
-	public int getUid() {
+	public long getUid() {
 		return uid;
 	}
 
 
-	public void setUid(int uid) {
+	public void setUid(long uid) {
 		this.uid = uid;
 	}
 

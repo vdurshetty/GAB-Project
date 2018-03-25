@@ -126,7 +126,7 @@ public class UserDAO {
 		return status;
 	}
 
-	public User getUser(int uid) throws FetchDataException{
+	public User getUser(long uid) throws FetchDataException{
 		User user = null;
 		Session session = null;
 		try{
@@ -184,6 +184,7 @@ public class UserDAO {
 			    
 		}catch (Exception ex){
 			log.error("Unable to Fetch User Details :" + ex.getMessage());
+			ex.printStackTrace();
 			throw new FetchDataException(ex.getMessage());
 		} 
 		finally{
@@ -247,7 +248,7 @@ public class UserDAO {
 			session = SF.getCurrentSession();
 			trans = session.getTransaction();
 	        trans.begin();
-	    	int uid = user.getUid();
+	    	long uid = user.getUid();
 			String sql = "delete from UserPermissions where uid=" + uid ;
 			
 			NativeQuery<Object[]>	query = session.createSQLQuery(sql); 

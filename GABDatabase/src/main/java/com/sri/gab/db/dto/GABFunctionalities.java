@@ -12,7 +12,7 @@ import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-@Table (name="PORA_Functionalities")
+@Table (name="GAB_Functionalities")
 public class GABFunctionalities {
 	
 		@Id
