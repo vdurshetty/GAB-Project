@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.sri.gab.db.dao.UserDAO;
+import com.sri.gab.db.dao.impl.UserDAOImpl;
 import com.sri.gab.db.dto.GABFunctionalities;
 import com.sri.gab.db.dto.User;
 import com.sri.gab.db.exception.AddException;
@@ -20,7 +21,7 @@ public class UserServiceImpl implements UserService{
 	UserDAO uDAO;
 	
 	public UserServiceImpl() {
-		uDAO = new UserDAO();
+		uDAO = new UserDAOImpl();
 	}
 
 	@Override

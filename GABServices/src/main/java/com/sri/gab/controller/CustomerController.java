@@ -15,14 +15,12 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import com.sri.gab.db.dto.Customer;
-import com.sri.gab.db.dto.User;
 import com.sri.gab.db.exception.AddException;
 import com.sri.gab.db.exception.FetchDataException;
 import com.sri.gab.db.exception.PrimaryKeyException;
 import com.sri.gab.db.exception.RecordNotFoundException;
 import com.sri.gab.db.exception.UpdateException;
 import com.sri.gab.services.CustomerService;
-import com.sri.gab.services.UserService;
 
 
 @CrossOrigin(origins = "*")

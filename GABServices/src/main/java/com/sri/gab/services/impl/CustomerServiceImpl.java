@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.sri.gab.db.dao.CustomerDAO;
+import com.sri.gab.db.dao.impl.CustomerDAOImpl;
 import com.sri.gab.db.dto.Customer;
 import com.sri.gab.db.exception.AddException;
 import com.sri.gab.db.exception.DeleteException;
@@ -20,7 +21,7 @@ public class CustomerServiceImpl implements CustomerService{
 	CustomerDAO cDAO;
 	
 	public CustomerServiceImpl() {
-		cDAO = new CustomerDAO();
+		cDAO = new CustomerDAOImpl();
 	}
 	
 	
