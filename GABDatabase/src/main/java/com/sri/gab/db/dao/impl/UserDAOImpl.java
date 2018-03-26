@@ -1,5 +1,5 @@
 
-package com.sri.gab.db.dao;
+package com.sri.gab.db.dao.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +16,7 @@ import org.hibernate.query.NativeQuery;
 import org.hibernate.transform.Transformers;
 
 import com.sri.gab.db.dto.KeyValueMaster;
+import com.sri.gab.db.dao.UserDAO;
 import com.sri.gab.db.dto.GABFunctionalities;
 import com.sri.gab.db.dto.User;
 import com.sri.gab.db.dto.UserPermissions;
@@ -29,13 +30,13 @@ import com.sri.gab.db.util.HibernateUtil;
 import com.sri.gab.logger.GABLogger;
 
 
-public class UserDAO {
+public class UserDAOImpl implements UserDAO{
 	
-	GABLogger log = GABLogger.getLogger(UserDAO.class.getName());
+	GABLogger log = GABLogger.getLogger(UserDAOImpl.class.getName());
 
 	SessionFactory SF = null;
 	
-	public UserDAO(){
+	public UserDAOImpl(){
 		SF = HibernateUtil.getSessionFactory();
 	}
 	

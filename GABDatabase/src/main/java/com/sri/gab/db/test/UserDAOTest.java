@@ -4,6 +4,7 @@ package com.sri.gab.db.test;
 import java.util.List;
 
 import com.sri.gab.db.dao.UserDAO;
+import com.sri.gab.db.dao.impl.UserDAOImpl;
 import com.sri.gab.db.dto.User;
 import com.sri.gab.logger.GABLogger;
 
@@ -15,7 +16,7 @@ public class UserDAOTest {
 	public static void main(String a[]) throws Exception{
 		
 		log.error("In User DAO  Test");
-		addUser();
+		//addUser();
 		dispAllcustomers();
 		//updateCustomer();
 		System.exit(0);
@@ -27,7 +28,7 @@ public class UserDAOTest {
 
 	
 	private static void dispAllcustomers()  throws Exception{
-		UserDAO uDao = new UserDAO();
+		UserDAO uDao = new UserDAOImpl();
 		List<User> users =  uDao.getAllUsers();
 		User user = null;
 		if (users!=null) {
@@ -47,7 +48,7 @@ public class UserDAOTest {
 	
 
 	private static void addUser() throws Exception {
-		UserDAO uDao = new UserDAO();
+		UserDAO uDao = new UserDAOImpl();
 
 		User user = new User();
 		user.setUserName("Gopal");

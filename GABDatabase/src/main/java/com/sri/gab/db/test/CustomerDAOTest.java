@@ -5,6 +5,7 @@ import java.util.GregorianCalendar;
 import java.util.List;
 
 import com.sri.gab.db.dao.CustomerDAO;
+import com.sri.gab.db.dao.impl.CustomerDAOImpl;
 import com.sri.gab.db.dto.Customer;
 import com.sri.gab.logger.GABLogger;
 
@@ -15,7 +16,7 @@ public class CustomerDAOTest {
 	public static void main(String a[]) throws Exception{
 		
 		log.error("In Customer  Test");
-		addCustomer();
+		//addCustomer();
 		//updateCustomer();
 		dispAllcustomers();
 		System.exit(0);
@@ -27,7 +28,7 @@ public class CustomerDAOTest {
 
 	
 	private static void dispAllcustomers()  throws Exception{
-	 CustomerDAO cDao = new CustomerDAO();
+	 CustomerDAO cDao = new CustomerDAOImpl();
 		List<Customer> customers =  cDao.getAllCustomers();
 		Customer cust = null;
 		int totCount = customers.size();
@@ -60,7 +61,7 @@ public class CustomerDAOTest {
 		cust.setEmail("My Email");
 		cust.setPhone1("3343434");
 		cust.setPhone2("3343434");
-		CustomerDAO cDao = new CustomerDAO();
+		CustomerDAO cDao = new CustomerDAOImpl();
 		cDao.addCustomer(cust);
 	}
 	
@@ -77,7 +78,7 @@ public class CustomerDAOTest {
 		cust.setPhone1("33434341");
 		cust.setPhone2("33434341");
 		
-		CustomerDAO cDao = new CustomerDAO();
+		CustomerDAO cDao = new CustomerDAOImpl();
 		if (cDao.updateCustomer(cust)) {
 			System.out.println("Customer Successfully Added....");
 		}
