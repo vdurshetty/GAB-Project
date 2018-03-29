@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import org.junit.Assert;
 
+// Test case 
 public class GABReadEnvTest {
 	@Test
 	public void readLoggerFileName() {
@@ -16,8 +17,7 @@ public class GABReadEnvTest {
 		String loggerFileName = GABReadEnv.getEnvValue(GABEnvProp.HibernateConfFile);
 		Assert.assertEquals("conf/hibernate.cfg.xml", loggerFileName);
 	}
-	
-	
+		
 	@Test
 	public void readDBConfig() {
 		String dbURL = GABReadEnv.getEnvValue(GABEnvProp.DBUrl);
