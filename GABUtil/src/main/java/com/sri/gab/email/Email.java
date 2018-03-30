@@ -2,6 +2,7 @@ package com.sri.gab.email;
 
 import java.util.List;
 
+// Email properties
 public class Email {
     private String from;
     private String to;
