@@ -18,12 +18,9 @@ public class UserDAOTest {
 	
 	static GABLogger log = GABLogger.getLogger(UserDAOTest.class.getName());
 	
-	
-	
-
 
 	@Test
-	private static void dispAllcustomers()  throws Exception{
+	public void dispAllUsers()  throws Exception{
 		UserDAO uDao = new UserDAOImpl();
 		List<User> users = null;
 		try {
