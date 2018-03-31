@@ -43,12 +43,22 @@ dependencies {
     
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.4.RELEASE'
     
+    
+   //https://www.youtube.com/watch?v=HHyjWc0ASl8
+    // https://mvnrepository.com/artifact/io.springfox/springfox-swagger2
+	compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.8.0'
+	
+	// https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui
+	compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.8.0'
+	
+    
+    
  	// https://mvnrepository.com/artifact/junit/junit
 	testCompile group: 'junit', name: 'junit', version: '4.12'
 	
-	  compile project(':GABUtil')
+	compile project(':GABUtil')
 	  
-	    compile project(':GABDatabase')
+	compile project(':GABDatabase')
  
 }
 
