@@ -1,0 +1,4 @@
+include ':GABUtil'
+include ':GABDatabase'
+project(':GABUtil').projectDir = new File(settingsDir, '../GABUtil')
+project(':GABDatabase').projectDir = new File(settingsDir, '../GABDatabase')
